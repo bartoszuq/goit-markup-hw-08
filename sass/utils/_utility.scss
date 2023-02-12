@@ -1,0 +1,39 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section {
+  padding: 94px 0px;
+
+  &--medium {
+    padding: 60px 0;
+  }
+}
+.text-center {
+  text-align: center;
+}
+.div-block {
+  display: block;
+}
+.link {
+  transition: var(--cubic-transition-color), var(--cubic-transition-fill);
+
+  &:is(:hover, :focus) {
+    color: var(--color-blueish);
+    fill: var(--color-blueish);
+  }
+}
+.page-active {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: var(--color-blueish);
+    top: 43.8px;
+    width: 100%;
+    bottom: -30.8px;
+    border-radius: 2px;
+  }
+}

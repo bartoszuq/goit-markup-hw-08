@@ -1,0 +1,27 @@
+// universal
+@forward "../components/buttons";
+@forward "../components/logo";
+@forward "../components/socials";
+
+// index.html
+@forward "../components/header";
+@forward "../components/navbar";
+@forward "../components/contact";
+@forward "../components/post-header";
+@forward "../components/our-skills";
+@forward "../components/about-us";
+@forward "../components/our-team";
+@forward "../components/our-customers";
+@forward "../components/footer";
+@forward "../components/address";
+@forward "../components/join-us";
+@forward "../components/newsletter";
+
+// portfolio.html
+@forward "../components/filter";
+@forward "../components/cards";
+
+// modal/form
+@forward "../components/modal";
+@forward "../components/form";
+@forward "../components/rules-acceptation";

@@ -1,0 +1,27 @@
+%contact-list-and-link {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  gap: 10px;
+  color: var(--color-greyish);
+  fill: var(--color-greyish);
+  transition: var(--cubic-transition-color), var(--cubic-transition-fill);
+}
+.contact {
+  &__list {
+    @extend %contact-list-and-link;
+    text-decoration: none;
+    color: var(--color-blackish);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.143;
+  }
+  &__item:not(:first-child) {
+    margin-left: 50px;
+  }
+  &__link {
+    @extend %contact-list-and-link;
+  }
+}

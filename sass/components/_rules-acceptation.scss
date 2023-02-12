@@ -1,0 +1,43 @@
+.rules-checkbox {
+  appearance: none;
+  &::before {
+    content: "";
+    display: block;
+    cursor: pointer;
+
+    width: 16px;
+    height: 15px;
+
+    border: 2px solid #212121;
+    border-radius: 2px;
+  }
+  &:checked.rules-checkbox::before {
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' width='34' height='32' viewBox='0 0 34 32'%3E%3Ctitle%3Eicon-check%3C/title%3E%3Cpath fill='%232196f3' d='M4.267 0h25.6c2.356 0 4.267 1.91 4.267 4.267v23.467c0 2.356-1.91 4.267-4.267 4.267h-25.6c-2.356 0-4.267-1.91-4.267-4.267v-23.467c0-2.356 1.91-4.267 4.267-4.267z'%3E%3C/path%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-linejoin='miter' stroke-linecap='butt' stroke-miterlimit='4' stroke-width='0.4267' d='M8.442 16.537l-0.147-0.14-2.205 2.088 7.767 7.41 16.318-15.567-2.19-2.089-14.128 13.465-5.416-5.167z'%3E%3C/path%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+  }
+}
+.rules-acceptation {
+  color: var(--color-greyish);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+
+  margin-bottom: 30px;
+
+  transition-delay: 0.65s, 0.65s;
+
+  &__label {
+    cursor: pointer;
+  }
+  &__link {
+    color: #2196f3;
+  }
+}

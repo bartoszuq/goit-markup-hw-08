@@ -1,0 +1,33 @@
+.about-us {
+  &__item {
+    position: relative;
+  }
+  &__heading {
+    color: var(--color-blackish);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.167;
+    margin-bottom: 50px;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__inside-overlay {
+    background-color: rgba(47, 48, 58, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.172;
+    letter-spacing: 0.03em;
+    height: 70px;
+    width: 100%;
+    bottom: 0;
+  }
+}

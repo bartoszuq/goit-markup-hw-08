@@ -1,0 +1,18 @@
+.post-header {
+  margin: 0 auto;
+  max-width: 1600px;
+  background: linear-gradient(#2f303a66, #2f303a66),
+    url("../images/order-service/order-service--background.jpg");
+  &.section {
+    padding: 200px 0;
+  }
+  &__heading {
+    color: white;
+    line-height: 1.364;
+    font-size: 44px;
+    font-weight: 900;
+    padding-bottom: 30px;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+}

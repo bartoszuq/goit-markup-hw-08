@@ -1,0 +1,35 @@
+.our-skills {
+  &.section {
+    padding-bottom: 0;
+    gap: 30px;
+  }
+  &__heading {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.143;
+    color: var(--color-blackish);
+    letter-spacing: 0.03em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  &__icon {
+    margin: 30px 100px;
+    &--background {
+      display: flex;
+      justify-content: center;
+      background-color: #f5f4fa;
+    }
+  }
+  &__description {
+    font-size: 14px;
+    line-height: 1.714;
+    color: var(--color-greyish);
+    letter-spacing: 0.03em;
+  }
+}
