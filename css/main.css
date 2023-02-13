@@ -725,20 +725,25 @@ ul {
   display: -ms-flexbox;
   display: flex;
   fill: #afb1b8;
-  padding: 16px 32px;
+  padding: 15px 51px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   -webkit-transition: var(--cubic-transition-fill), var(--cubic-transition-bg-color);
   transition: var(--cubic-transition-fill), var(--cubic-transition-bg-color);
 }
+@media (min-width: 768px) and (max-width: 1199px) {
+  .our-customers__link {
+    padding: 15px 59px;
+  }
+}
+@media (min-width: 1200px) {
+  .our-customers__link {
+    padding: 15px 31px;
+  }
+}
 .our-customers__link:hover {
   fill: var(--color-blueish);
   border-color: var(--color-blueish);
-}
-@media (min-width: 1200px) {
-  .our-customers__link:hover {
-    padding: 15px 51px;
-  }
 }
 
 .footer {

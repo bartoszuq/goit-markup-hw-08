@@ -18,16 +18,20 @@
 .our-customers__link {
   display: flex;
   fill: #afb1b8;
-  padding: 16px 32px;
+  padding: 15px 51px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   transition: var(--cubic-transition-fill), var(--cubic-transition-bg-color);
+
+  @include mixin.mq(tablet, and, desktop) {
+    padding: 15px 59px;
+  }
+  @include mixin.mq(desktop) {
+    padding: 15px 31px;
+  }
+
   &:hover {
     fill: var(--color-blueish);
     border-color: var(--color-blueish);
-
-    @include mixin.mq(desktop) {
-      padding: 15px 51px;
-    }
   }
 }
