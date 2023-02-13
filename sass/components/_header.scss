@@ -1,14 +1,22 @@
+@use "../utils/mixins" as mixin;
+
 .header {
-  padding: 24px 0;
+  padding: 9.5px 0;
   border-bottom: 1px solid #ececec;
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+  @include mixin.mq(tablet) {
+    padding: 24.5px 0;
   }
-  &__links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.header__links {
+  // display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

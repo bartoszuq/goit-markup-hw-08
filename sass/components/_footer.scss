@@ -1,36 +1,52 @@
+@use "../utils/mixins" as mixin;
+
 .footer {
   background-color: #2f303a;
   color: white;
-  &__logo {
-    color: white;
-    margin-bottom: 20px;
-    letter-spacing: 0.03em;
+  text-align: center;
+
+  @include mixin.mq(desktop) {
+    text-align: left;
   }
-  &__headings {
-    display: flex;
-    cursor: text;
-    margin-bottom: 20px;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.143;
-    letter-spacing: 0.03em;
+}
+.footer__headings {
+  display: block;
+  cursor: text;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+}
+.footer__list {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 60px;
+  column-gap: 144px;
+
+  @include mixin.mq(desktop) {
+    justify-content: flex-start;
+    row-gap: 0;
+    column-gap: 0;
   }
-  &__list {
-    display: flex;
-    align-items: baseline;
-  }
-  &__item {
-    display: flex;
-    flex-direction: column;
+}
+.footer__item {
+  display: flex;
+  flex-direction: column;
+
+  @include mixin.mq(desktop) {
     &:first-child {
       margin-right: 70px;
     }
   }
-  .socials__link {
-    fill: white;
-    background: #ffffff1a;
-  }
-  .socials__link:hover {
+}
+.footer .socials__link {
+  fill: white;
+  background: #ffffff1a;
+
+  &:hover {
     fill: white;
     background: var(--color-blueish);
   }

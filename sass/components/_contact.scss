@@ -1,3 +1,5 @@
+@use "../utils/mixins" as mixin;
+
 %contact-list-and-link {
   text-decoration: none;
   display: flex;
@@ -9,19 +11,32 @@
   fill: var(--color-greyish);
   transition: var(--cubic-transition-color), var(--cubic-transition-fill);
 }
-.contact {
-  &__list {
-    @extend %contact-list-and-link;
-    text-decoration: none;
-    color: var(--color-blackish);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.143;
+.contact__list {
+  display: none;
+  @extend %contact-list-and-link;
+  text-decoration: none;
+  color: var(--color-blackish);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+
+  @include mixin.mq(tablet, and, desktop) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .contact__item:not(:first-child) {
+      margin-left: 0;
+    }
   }
-  &__item:not(:first-child) {
-    margin-left: 50px;
+  @include mixin.mq(desktop) {
+    display: flex;
+    flex-direction: row;
   }
-  &__link {
-    @extend %contact-list-and-link;
-  }
+}
+.contact__item:not(:first-child) {
+  margin-left: 50px;
+}
+.contact__link {
+  @extend %contact-list-and-link;
 }

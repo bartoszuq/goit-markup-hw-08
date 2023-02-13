@@ -1,10 +1,11 @@
+@use "../utils/mixins" as mixin;
+
 .join-us {
-  margin-right: 78px;
-  &__link {
-    fill: #afb1b8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px;
+  @include mixin.mq(desktop) {
+    margin-right: 78px;
   }
+}
+.join-us__link {
+  fill: #afb1b8;
+  padding: 12px;
 }

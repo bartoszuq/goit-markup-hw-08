@@ -1,0 +1,36 @@
+// @Filip Bączkowski
+
+@use "sass:map";
+
+$breakpoints: (
+  tiny-mobile: 320px,
+  mobile: 480px,
+  tablet: 768px,
+  desktop: 1200px,
+);
+
+@mixin breakpoint($key) {
+  breakpoint: map.get($breakpoints, $key);
+}
+
+@mixin mq($key, $add: null, $key2: null) {
+  $size: map.get($breakpoints, $key);
+  $size2: map.get($breakpoints, $key2);
+
+  @if ($add == null) {
+    @media (min-width: $size) {
+      @content;
+    }
+  } @else if ($add == and) {
+    @media (min-width: $size) and (max-width: calc($size2 - 1px)) {
+      @content;
+    }
+  }
+}
+// @include  mixin.mq(desktop) {
+//   *zawartosc*;
+// }
+
+// @include  mixin.mq(mobile, and, tablet) {
+//   *zawartosc*;
+// }

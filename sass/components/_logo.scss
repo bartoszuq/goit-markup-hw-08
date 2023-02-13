@@ -1,23 +1,33 @@
+@use "../utils/mixins" as mixin;
+
 .logo {
   text-decoration: none;
   font-family: "Raleway", sans-serif;
+  font-size: 24px;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.154;
+  line-height: 1.167;
   letter-spacing: 0.03em;
+}
+.logo--primary {
+  // background-color: red;
 
-  &--primary {
+  @include mixin.mq(desktop) {
+    font-size: 26px;
+    line-height: 1.154;
+  }
+}
+.logo--secondary {
+  margin-bottom: 20px;
+}
+
+.logo__color-design {
+  color: var(--color-blueish);
+
+  &--dark {
     color: black;
   }
-  &__color-design {
-    color: var(--color-blueish);
 
-    &--dark {
-      color: black;
-    }
-
-    &--light {
-      color: white;
-    }
+  &--light {
+    color: white;
   }
 }

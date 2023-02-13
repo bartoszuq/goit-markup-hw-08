@@ -1,36 +1,59 @@
-.our-team {
-  &.section {
-    background-color: #f5f4fa;
-  }
-  &__heading {
-    color: var(--color-blackish);
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.167;
-    margin-bottom: 50px;
-  }
-  &__list {
-    display: flex;
+@use "../utils/mixins" as mixin;
+
+.our-team.section {
+  background-color: #f5f4fa;
+}
+.our-team__heading {
+  color: var(--color-blackish);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.167;
+  margin-bottom: 50px;
+}
+.our-team__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @include mixin.mq(desktop) {
     justify-content: space-between;
-    align-items: center;
   }
-  &__item {
-    background-color: white;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
+}
+.our-team__item {
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.our-team__img {
+  width: 300px;
+  height: auto;
+
+  @include mixin.mq(mobile, and, tablet) {
+    width: 450px;
+    height: 460px;
   }
-  &__name {
-    margin: 30px 0 10px 0;
-    color: var(--color-blackish);
-    font-weight: 500;
-    font-size: var(--default-font-size);
-    line-height: 1.188;
+  @include mixin.mq(tablet, and, desktop) {
+    width: 354px;
+    height: 374px;
   }
-  &__specialization {
-    color: var(--color-greyish);
-    font-size: var(--default-font-size);
-    line-height: 1.189;
-    margin: 10px 0 16px 0;
+  @include mixin.mq(desktop) {
+    width: 270px;
+    height: 260px;
   }
+}
+.our-team__name {
+  margin: 30px 0 10px 0;
+  color: var(--color-blackish);
+  font-weight: 500;
+  font-size: var(--default-font-size);
+  line-height: 1.188;
+}
+.our-team__specialization {
+  color: var(--color-greyish);
+  font-size: var(--default-font-size);
+  line-height: 1.189;
+  margin: 10px 0 16px 0;
 }

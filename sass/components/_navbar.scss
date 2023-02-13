@@ -1,19 +1,32 @@
+@use "../utils/mixins" as mixin;
+
 .navbar {
-  &__list {
-    display: flex;
+  display: none;
+
+  @include mixin.mq(tablet) {
+    display: block;
+  }
+}
+.navbar__list {
+  display: flex;
+  margin-left: 83px;
+  flex-wrap: wrap;
+
+  @include mixin.mq(desktop) {
     margin-left: 93px;
   }
-  &__item {
-    position: relative;
-    &:not(:first-child) {
-      margin-left: 46px;
-    }
+}
+.navbar__item {
+  position: relative;
+  &:not(:first-child) {
+    margin-left: 46px;
   }
-  &__content {
-    text-decoration: none;
-    color: var(--color-blackish);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.143;
-  }
+}
+.navbar__content {
+  text-decoration: none;
+  color: var(--color-blackish);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
 }

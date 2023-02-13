@@ -1,28 +1,33 @@
-.our-customers {
-  &__heading {
-    margin-bottom: 50px;
-    color: var(--color-blackish);
-    line-height: 1.167;
-    font-size: 36px;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-  }
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-  }
-  &__link {
-    display: flex;
-    fill: #afb1b8;
-    padding: 16px 32px;
-    border: 1px solid #afb1b8;
-    border-radius: 4px;
-    transition: var(--cubic-transition-fill), var(--cubic-transition-bg-color);
-    &:hover {
-      fill: var(--color-blueish);
-      border-color: var(--color-blueish);
+@use "../utils/mixins" as mixin;
+
+.our-customers__heading {
+  margin-bottom: 50px;
+  color: var(--color-blackish);
+  line-height: 1.167;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.our-customers__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.our-customers__link {
+  display: flex;
+  fill: #afb1b8;
+  padding: 16px 32px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  transition: var(--cubic-transition-fill), var(--cubic-transition-bg-color);
+  &:hover {
+    fill: var(--color-blueish);
+    border-color: var(--color-blueish);
+
+    @include mixin.mq(desktop) {
+      padding: 15px 51px;
     }
   }
 }

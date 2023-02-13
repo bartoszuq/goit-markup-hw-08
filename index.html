@@ -65,6 +65,16 @@
             </li>
           </ul>
         </div>
+        <button
+          type="button"
+          class="button-mobile js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="button-mobile__icon div-block" width="40px" height="40px">
+            <use href="images/icons.svg#burger--icon"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -178,10 +188,9 @@
           <ul class="our-team__list">
             <li class="our-team__item">
               <img
+                class="our-team__img"
                 src="images/our-team/employee1.jpg"
                 alt="mężczyzna o krótkich włosach z okularami i zarostem, ubrany w czerwoną koszulę"
-                width="270"
-                height="260"
               />
               <h4 class="our-team__name">John Doe</h4>
               <p class="our-team__specialization">Product Designer</p>
@@ -221,10 +230,9 @@
 
             <li class="our-team__item">
               <img
+                class="our-team__img"
                 src="images/our-team/employee2.jpg"
                 alt="kobieta o długich bląd włosach z okularami, ubrana w biały podkoszulek i granatową marynarkę"
-                width="270"
-                height="260"
               />
               <h4 class="our-team__name">John Doe</h4>
               <p class="our-team__specialization">Frontend Developer</p>
@@ -263,10 +271,9 @@
             </li>
             <li class="our-team__item">
               <img
+                class="our-team__img"
                 src="images/our-team/employee3.jpg"
                 alt="mężczyzna o krótkich włosach i zarostem, ubrany w błękitną koszulę, wzrok skierowany na bok"
-                width="270"
-                height="260"
               />
               <h4 class="our-team__name">John Doe</h4>
               <p class="our-team__specialization">Marketing</p>
@@ -306,10 +313,9 @@
 
             <li class="our-team__item">
               <img
+                class="our-team__img"
                 src="images/our-team/employee4.jpg"
                 alt="mężczyzna o krótkich włosach z okularami i zarostem, ubrany w czarną koszulkę"
-                width="270"
-                height="260"
               />
               <h4 class="our-team__name">John Doe</h4>
               <p class="our-team__specialization">UI Designer</p>
@@ -404,7 +410,7 @@
         <ul class="footer__list">
           <li class="footer__item">
             <!-- LOGO -->
-            <a href="index.html" class="logo footer__logo"
+            <a href="index.html" class="logo logo--secondary"
               ><span class="logo__color-design">Web</span
               ><span class="logo__color-design logo__color-design--light"
                 >Studio</span
@@ -494,10 +500,65 @@
         </ul>
       </div>
     </footer>
+
+    <!-- MOBILE MODAL -->
+
+    <div class="mobile-modal js-menu-container">
+      <button type="button" class="button-mobile-close js-close-menu">
+        <svg class="modal__close-svg div-block" width="18px" height="18px">
+          <use href="images/icons.svg#close-icon"></use>
+        </svg>
+      </button>
+      <nav>
+        <ul class="mobile-modal__nav">
+          <li class="mobile-modal__item">
+            <a class="mobile-modal__link mobile-active" href="./index.html"
+              >Agencja</a
+            >
+          </li>
+          <li class="mobile-modal__item">
+            <a class="mobile-modal__link" href="./portfolio.html">Portfolio</a>
+          </li>
+          <li class="mobile-modal__item">
+            <a class="mobile-modal__link" href="#footer">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile-modal__contact-links">
+        <ul class="mobile-contacts">
+          <li class="mobile-contacts__item">
+            <a class="mobile-telephone__link" href="tel:+48111111111"
+              >+48 111 111 111</a
+            >
+          </li>
+          <li class="mobile-contacts__item">
+            <a class="mobile-email__link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile-social-links">
+          <li class="mobile-social-links__item">
+            <a class="mobile-social-links__link" href="#">Instagram</a>
+          </li>
+          <li class="mobile-social-links__item">
+            <a class="mobile-social-links__link" href="#">Twitter</a>
+          </li>
+          <li class="mobile-social-links__item">
+            <a class="mobile-social-links__link" href="#">Facebook</a>
+          </li>
+          <li class="mobile-social-links__item">
+            <a class="mobile-social-links__link" href="#">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!------- MODAL CONTACT FORM ------->
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <!------- MODAL CONTACT FORM ------->
-
+        <!-- ---------- -->
         <form class="form modal__form">
           <h2 class="form__heading form__transitions text-center">
             Zostaw swoje dane w formularzu poniżej
@@ -645,7 +706,16 @@
       </div>
     </div>
     <!-- SCRIPT -->
+    <script src="./mobile-menu.js"></script>
+
     <script src="./modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
 

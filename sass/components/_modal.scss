@@ -1,3 +1,5 @@
+@use "../utils/mixins" as mixin;
+
 .is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -51,9 +53,14 @@
   color: black;
 
   cursor: pointer;
+
+  &:hover .modal__close-svg {
+    fill: var(--color-blueish);
+  }
 }
 .modal__close-svg {
   fill: black;
+  transition: var(--cubic-transition-fill);
 }
 .modal__form {
   padding: 40px;
@@ -72,10 +79,12 @@
   fill: var(--color-blackish);
 }
 /* -------------- !!! ANIMATE SECTION !!! -------------- */
-.is-hidden .modal {
-  border-radius: 200px;
-  transform: translateY(-100%);
-  scale: 0.5;
+.is-hidden {
+  .modal {
+    border-radius: 200px;
+    transform: translateY(-100%);
+    scale: 0.5;
+  }
 }
 .is-hidden .form__subheading.form__transition--name,
 .is-hidden .form__subheading.form__transition--telephone,

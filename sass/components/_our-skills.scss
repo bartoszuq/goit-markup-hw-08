@@ -1,35 +1,55 @@
-.our-skills {
-  &.section {
+@use "../utils/mixins" as mixin;
+
+.our-skills.section {
+  gap: 30px;
+
+  @include mixin.mq(desktop) {
     padding-bottom: 0;
-    gap: 30px;
   }
-  &__heading {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.143;
-    color: var(--color-blackish);
-    letter-spacing: 0.03em;
-    margin-top: 30px;
-    margin-bottom: 10px;
+}
+.our-skills__heading {
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  color: var(--color-blackish);
+  letter-spacing: 0.03em;
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  @include mixin.mq(tablet) {
+    text-align: left;
   }
-  &__list {
+}
+.our-skills__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.our-skills__item {
+  max-width: 450px;
+
+  @include mixin.mq(tablet, and, desktop) {
+    max-width: 354px;
+  }
+  @include mixin.mq(desktop) {
+    max-width: 270px;
+  }
+}
+.our-skills__icon {
+  margin: 30px 100px;
+
+  &--background {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 30px;
+    background-color: #f5f4fa;
   }
-  &__icon {
-    margin: 30px 100px;
-    &--background {
-      display: flex;
-      justify-content: center;
-      background-color: #f5f4fa;
-    }
-  }
-  &__description {
-    font-size: 14px;
-    line-height: 1.714;
-    color: var(--color-greyish);
-    letter-spacing: 0.03em;
-  }
+}
+.our-skills__description {
+  font-size: 14px;
+  line-height: 1.714;
+  color: var(--color-greyish);
+  letter-spacing: 0.03em;
 }

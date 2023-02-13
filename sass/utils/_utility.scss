@@ -1,12 +1,21 @@
+@use "../utils/mixins" as mixin;
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding-inline: 15px;
+
+  @include mixin.mq(desktop) {
+    padding-inline: 0;
+  }
+  @include mixin.mq(tablet, and, desktop) {
+    max-width: 800px;
+  }
 }
 .section {
-  padding: 94px 0px;
-
+  padding-block: 94px;
   &--medium {
-    padding: 60px 0;
+    padding-block: 60px;
   }
 }
 .text-center {
@@ -31,9 +40,9 @@
     position: absolute;
     display: block;
     background-color: var(--color-blueish);
-    top: 43.8px;
+    top: 44.8px;
     width: 100%;
-    bottom: -30.8px;
+    bottom: -31.8px;
     border-radius: 2px;
   }
 }
