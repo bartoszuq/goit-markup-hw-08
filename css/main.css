@@ -62,9 +62,15 @@
   display: block;
   background-color: var(--color-blueish);
   top: 44.8px;
-  width: 100%;
   bottom: -31.8px;
+  width: 100%;
   border-radius: 2px;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .page-active::after {
+    top: 50.8px;
+    bottom: -37.8px;
+  }
 }
 
 body {
